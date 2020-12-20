@@ -8,7 +8,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="./index.html">
-            <img src={{asset("admi/assets/img/brand/blue.png")}} class="navbar-brand-img" alt="...">
+            <img src={{asset("admin/assets/img/brand/blue.png")}} class="navbar-brand-img" alt="...">
 </a>
 <!-- User -->
 <ul class="nav align-items-center d-md-none">
@@ -96,30 +96,11 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href={{asset("admin/examples/icons.html")}}>
-                <i class="ni ni-planet text-blue"></i> آیکون ها
+            <a class="nav-link" href={{route('admin.title.index')}}>
+                <i class="ni ni-planet text-blue"></i>تیترها
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href={{asset("admin/examples/maps.html")}}>
-                <i class="ni ni-pin-3 text-orange"></i> نقشه ها
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href={{asset("admin/examples/profile.html")}}>
-                <i class="ni ni-single-02 text-yellow"></i> پروفایل کاربر
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href={{asset("admin/examples/tables.html")}}>
-                <i class="ni ni-bullet-list-67 text-red"></i> جداول
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href={{asset("admin/examples/login.html")}}>
-                <i class="ni ni-key-25 text-info"></i> ورود
-            </a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href={{asset("admin/examples/register.html")}}>
                 <i class="ni ni-circle-08 text-pink"></i> عضویت
