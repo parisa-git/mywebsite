@@ -22,6 +22,10 @@
     <link rel="stylesheet" href={{asset("admin/assets/css/datatables.css")}}>
     <link rel="stylesheet" href={{asset("admin/assets/css/bootstrap.min.css")}}>
 
+    @yield('headerLinks')
+
+    @yield('headerScripts')
+
 </head>
 <body>
 <div class="main-content">
@@ -53,5 +57,7 @@
 <script src={{asset("admin/assets/js/datatables.min.js")}}></script>
 <script src={{asset("admin/assets/js/bootstrap.min.js")}}></script>
 <script src={{asset("admin/assets/js/bootstrap.js")}}></script>
+
+@yield('footerscript')
 </body>
 </html>

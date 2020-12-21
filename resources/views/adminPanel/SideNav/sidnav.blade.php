@@ -91,12 +91,12 @@
     <!-- Navigation -->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link active" href="{{route("dashbord")}}">
+            <a class="nav-link active" id="dashboard" href="{{route("dashbord")}}">
                 <i class="ni ni-tv-2 text-primary"></i> داشبورد
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href={{route('admin.title.index')}}>
+            <a class="nav-link" id="titles" href={{route('admin.title.index')}}>
                 <i class="ni ni-planet text-blue"></i>تیترها
             </a>
         </li>
