@@ -16,6 +16,7 @@
     </div>
 </div>
 <div class="page">
+
     @include('Site.Layout.navbar')
 
     @include('Site.pages.index.JobsFactory')

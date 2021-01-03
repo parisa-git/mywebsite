@@ -15,87 +15,26 @@
                         </div>
                     </div>
                     <div class="rd-navbar-main-element">
-                        <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-nav-wrap " style="direction: rtl">
                             <ul class="rd-navbar-nav">
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">For Candidates</a>
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="job-listing.html">Job Listing</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="job-listing-full.html">Job Listing Full</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="companies.html">Companies</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="companies-page.html">Companies Page</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="job-details.html">Job Details</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="submit-resume.html">Submit Resume</a>
-                                        </li>
-                                    </ul>
+
+                                <li class="rd-nav-item ml-5"><a class="rd-nav-link" href="#">صفحه اصلی</a>
+
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">For Employers</a>
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="post-a-job.html">Post a Job</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="candidates.html">Candidates</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="candidates-grid.html">Candidates Grid</a>
-                                        </li>
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="resume-page.html">Resume Page</a>
-                                        </li>
-                                    </ul>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">درباره ما</a>
+
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
-                                    <ul class="rd-menu rd-navbar-megamenu">
-                                        <li class="rd-megamenu-item">
-                                            <h6 class="rd-megamenu-title"><a href="pages-1.html">Pages 1</a></h6>
-                                            <ul class="rd-megamenu-list">
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="about-us.html">About Us</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="contact-us.html">Contact Us</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="faq.html">FAQ</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing-tables.html">Pricing Tables</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Testimonials</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="rd-megamenu-item">
-                                            <h6 class="rd-megamenu-title"><a href="pages-2.html">Pages 2</a></h6>
-                                            <ul class="rd-megamenu-list">
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="maintenance.html">Maintenance</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404.html">404</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503.html">503</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Privacy Policy</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="rd-megamenu-item">
-                                            <h6 class="rd-megamenu-title"><a href="elements.html">Elements</a></h6>
-                                            <ul class="rd-megamenu-list">
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress Bars</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Tabs and Accordions</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
-                                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid system</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="blog.html">Blog</a>
-                                    <ul class="rd-menu rd-navbar-dropdown">
-                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog post</a>
-                                        </li>
-                                    </ul>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">تماس با ما</a>
+
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="rd-navbar-aside">
                         <div class="rd-navbar-aside-item">
-                            <button class="button button-xs button-primary-outline button-icon button-icon-left rd-navbar-popup-toggle" data-rd-navbar-toggle="#rd-navbar-register"><span class="icon mdi mdi-account"></span>Sign Up</button>
+                            <button class="button button-xs button-primary-outline button-icon button-icon-left rd-navbar-popup-toggle" data-rd-navbar-toggle="#rd-navbar-register"><span class="icon mdi mdi-account"></span>عضویت</button>
                             <div class="rd-navbar-popup bg-gray-100" id="rd-navbar-register">
-                                <h5 class="rd-navbar-popup-title">Sign Up</h5>
+                                <h5 class="rd-navbar-popup-title">عضویت</h5>
                                 <form class="rd-form rd-mailform form-compact" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                                     <div class="form-wrap">
                                         <input class="form-input" id="rd-navbar-register-name" type="text" name="username" data-constraints="@Required"/>
@@ -126,9 +65,9 @@
                             </div>
                         </div>
                         <div class="rd-navbar-aside-item">
-                            <button class="button button-xs button-primary button-icon button-icon-left rd-navbar-popup-toggle" data-rd-navbar-toggle="#rd-navbar-login"><span class="icon mdi mdi-import"></span>Login</button>
+                            <button class="button button-xs button-primary button-icon button-icon-left rd-navbar-popup-toggle" data-rd-navbar-toggle="#rd-navbar-login"><span class="icon mdi mdi-import"></span> <i class="fas fa-sign-in-alt"></i>ورود</button>
                             <div class="rd-navbar-popup bg-gray-100" id="rd-navbar-login">
-                                <h5 class="rd-navbar-popup-title">Login</h5>
+                                <h5 class="rd-navbar-popup-title">ورود</h5>
                                 <form class="rd-form form-compact">
                                     <div class="form-wrap">
                                         <input class="form-input" id="rd-navbar-login-email" type="email" name="email" data-constraints="@Email @Required"/>
@@ -152,21 +91,29 @@
     <div class="jumbotron-creative-inner">
         <div class="container">
             <div class="jumbotron-creative-main">
-                <h2 class="jumbotron-creative-title">Start Building Your Own Career Now</h2>
+                @foreach($titles as $title)
+
+                    @if($title->id == 1)
+                <h2 class="jumbotron-creative-title text-right">{{$title->firstTitle}}</h2>
+                    @endif
+                @endforeach
                 <div class="form-layout-search-outer">
                     <form class="form-layout-search form-lg">
                         <div class="form-wrap form-wrap-icon">
-                            <input class="form-input" id="form-keywords" type="text" name="keywords" data-constraints="@Required">
-                            <label class="form-label" for="form-keywords">Keywords</label><span class="icon fl-bigmug-line-circular224"></span>
-                        </div>
+                            <select class="form-input select" id="form-region" data-placeholder="All Regions" name="region" data-minimum-results-for-search="Infinity" data-constraints="@Selected">
+                                @foreach($allJobCategories as $cat)
+                                    <option selected value="{{$cat->id}}">{{$cat->cat_name}}</option>
+                                @endforeach
+                            </select>
+                           </div>
                         <div class="form-wrap form-wrap-icon form-wrap-select">
                             <!-- Select 2-->
                             <select class="form-input select" id="form-region" data-placeholder="All Regions" name="region" data-minimum-results-for-search="Infinity" data-constraints="@Selected">
-                                <option label="All Regions"></option>
-                                <option value="1">Seattle</option>
-                                <option value="2">Miami</option>
-                                <option value="3">Chicago</option>
-                            </select><span class="icon fl-bigmug-line-big104"></span>
+                                @foreach($allstates as $state)
+                                    <option selected value="{{$state->id}}">{{$state->name}}</option>
+                                @endforeach
+                            </select>
+                            <span class="icon fl-bigmug-line-big104"></span>
                         </div>
                         <div class="form-wrap form-wrap-button form-wrap-button-icon-only">
                             <button class="button button-lg button-primary button-icon-only" type="submit" aria-label="search"><span class="icon icon-4 fl-bigmug-line-search74"></span></button>
@@ -190,3 +137,4 @@
         </div>
     </div>
 </header>
+

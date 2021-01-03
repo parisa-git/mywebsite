@@ -1,9 +1,14 @@
 <!-- Welcome to JobsFactory-->
 <section class="section section-md bg-default text-center">
-    <div class="container">
-        <h3>Welcome to <span class="text-primary">Jobs</span>Factory</h3>
-        <p class="text-spacing-05">A place where leading employers are already looking for your talent and experience.</p>
-        <div class="row row-50 justify-content-center align-items-center text-left">
+    <div class="container ">
+        @foreach($titles as $title)
+            @if($title->id == 2)
+        <h3>{{$title->firstTitle}}</h3>
+
+        <p class="text-spacing-05">{{$title->secendTitle}}</p>
+            @endif
+        @endforeach
+                <div class="row row-50 justify-content-center align-items-center text-left">
             <div class="col-md-10 col-lg-6">
                 <figure class="figure-responsive block-5"><img src={{asset("Site/images/home-2-540x413.jpg")}} alt="" width="540" height="413"/>
                 </figure>

@@ -76,24 +76,26 @@
         <div class="container">
             <div class="row">
 
+
                 <div class="col-sm-12">
                     @if(session('message'))
-                        <div class="alert alert-success col-sm-3">
+                        <div class="alert alert-success col-sm-12 float-right" >
                             <li>{{Session::get('message')}}</li>
                         </div>
                     @endif
                     @if(session ('error'))
-                        <div class="alert alert-danger col-sm-3">
+                        <div class="alert alert-danger col-sm-12 float-right" >
                             <li>{{Session::get('error')}}</li>
                         </div>
                     @endif
                     @if(session ('warning'))
-                        <div class="alert alert-warning col-sm-3">
+                        <div class="alert alert-warning col-sm-12 float-right">
                             <li>{{Session::get('warning')}}</li>
                         </div>
                     @endif
                 </div>
-                <div class="card text-right" style="    position: relative;right: 124px;">
+
+                <div class="card text-right" >
                     <div class="card-header">
                         <div class="card-title">مشخصات تیتر جدید</div>
                     </div>
@@ -136,7 +138,7 @@
                                     </div>
                                 </div>
                                 <!-----------title description---------->
-                                <div class="col-sm-8">
+                                <div class="col-sm-12">
                                     <div class="form-group">
                                         <lable>توضیحات زیر تیتر</lable>
                                         <textarea rows="5" type="text" class="form-control" name="description" id="description" placeholder="توضیحات زیر تیتر را وارد کنید ..." value="{{old('description')}}"></textarea>
@@ -156,25 +158,21 @@
 
 
             @stop
-            @section('footerScripts')
-                <!-- bs-custom-file-input -->
-                    <script
-                        src="{{ url('adminPanel/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
-                    <script src="{{ url('adminPanel/plugins/ckeditor/ckeditor.js') }}"></script>
+            @section('footerscript')
 
-                    <script !src="">
-
-                        // CKEDITOR.replace('description', {
-                        //     filebrowserUploadMethod : 'form',
-                        //     filebrowserUploadUrl: '/dashboard/save_image',
-                        //     filebrowserImageUploadUrl: '/dashboard/save_image',
-                        //
-                        // });
-
-                    </script>
+                <script src="{{url('admin/assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
+                <script src="{{url('admin/plugins/ckeditor/ckeditor.js')}}"></script>
+                <script !src="">
+                    CKEDITOR.replace('description' , {
+                        filebrowserUploadMethod : 'form',
+                        filebrowserUploadUrl: '/dashboard/title/save_image',
+                        filebrowserImageUploadUrl: '/dashboard/title/save_image',
+                    });
+                </script>
 
                     <script !src="">
                         $('.nav-link').removeClass('active');
                         $('#titles').addClass('active');
                     </script>
-@stop
+            @endsection
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Title;
 use Illuminate\Http\Request;
 
 class TitleController extends Controller
@@ -14,7 +15,7 @@ class TitleController extends Controller
      */
     public function index()
     {
-//        return view('Site.Home.index');
+        //
     }
 
     /**
@@ -46,7 +47,8 @@ class TitleController extends Controller
      */
     public function show($id)
     {
-        //
+//        $allTitle = Title::all();
+//        return redirect(route('Home'));
     }
 
     /**
@@ -82,4 +84,7 @@ class TitleController extends Controller
     {
         //
     }
+
+
+
 }

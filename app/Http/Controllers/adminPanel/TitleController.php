@@ -5,6 +5,8 @@ namespace App\Http\Controllers\adminPanel;
 use App\Http\Controllers\Controller;
 use App\Title;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+//use SweetAlert;
 
 class TitleController extends Controller
 {
@@ -39,6 +41,7 @@ class TitleController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'titleLocation' => ['required', 'min:3', 'max:255'],
             'firstTitle' => ['required', 'min:3', 'max:255'],
@@ -91,7 +94,7 @@ class TitleController extends Controller
     {
         $title = Title::findorfail($id);
         return view('adminPanel.titles.edite' , compact('title'));
-//        return view('adminPanel.titles.edite');
+
     }
 
     /**
@@ -144,12 +147,33 @@ class TitleController extends Controller
     public function destroy($id)
     {
         $title = Title::findOrFail($id);
-
+//        SweetAlert::message('Robots are working!');
         if (!$title) {
             return redirect(route('admin.title.index'))->with('error', 'تیتر مورد نظر موجود نمی باشد');
         } else {
             $title->delete();
             return redirect(route('admin.title.index'))->with('warning', 'تیتر ' . $title->titleLocation . ' با موفقیت حذف شد');
         }
+    }
+
+    public function uploadImage()
+    {
+        $this->validate(request(), [
+            'upload' => 'required'
+        ]);
+        $image = '';
+
+        $imagePath = "/upload/images/2020/";
+        $file = request()->file('upload');
+        $filename = $file->getClientOriginalName();
+        if (file_exists(public_path($imagePath) . $filename)) {
+            $filename = Carbon::now()->timestamp . $filename;
+        }
+        $file->move(public_path($imagePath), $filename);
+        $url = $imagePath . $filename;
+        $function_number = $_GET['CKEditorFuncNum'];
+        $message = '';
+        return "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction( '$function_number' , '$url' , '$message' );</script>";
+
     }
 }

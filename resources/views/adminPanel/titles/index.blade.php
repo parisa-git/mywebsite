@@ -24,32 +24,33 @@
         <section class="content">
             <div class="row">
 
-                    <div class="col-sm-12">
-                        @if(session('message'))
-                            <div class="alert alert-success col-sm-3">
-                                <li>{{Session::get('message')}}</li>
-                            </div>
-                        @endif
-                        @if(session ('error'))
-                            <div class="alert alert-danger col-sm-3">
-                                <li>{{Session::get('error')}}</li>
-                            </div>
-                        @endif
-                        @if(session ('warning'))
-                            <div class="alert alert-warning col-sm-3">
-                                <li>{{Session::get('warning')}}</li>
-                            </div>
-                        @endif
-                    </div>
+
+                <div class="col-sm-12">
+                    @if(session('message'))
+                        <div class="alert alert-success col-sm-12 float-right" >
+                            <li>{{Session::get('message')}}</li>
+                        </div>
+                    @endif
+                    @if(session ('error'))
+                        <div class="alert alert-danger col-sm-12 float-right" >
+                            <li>{{Session::get('error')}}</li>
+                        </div>
+                    @endif
+                    @if(session ('warning'))
+                        <div class="alert alert-warning col-sm-12 float-right">
+                            <li>{{Session::get('warning')}}</li>
+                        </div>
+                    @endif
+                </div>
                 <div class="col-sm-12">
                     @foreach($errors->all() as $error)
-                        <div class="alert alert-danger col-sm-3">
+                        <div class="alert alert-danger col-sm-12 featherlight" >
                             <li>{{$error}}</li>
                         </div>
                     @endforeach
                 </div>
 
-                <div class="col-9" style="position: relative;left: 50px;">
+                <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex">
 
@@ -76,11 +77,11 @@
                                 <tbody>
                                 @foreach($allTitle as $title)
                                 <tr>
-                                    <td>{{$title->id}}</td>
+                                    <td>{{$loop->iteration}}</td>
                                     <td>{{$title->titleLocation}}</td>
-                                    <td>{{$title->firstTitle}}</td>
-                                    <td>{{$title->secendTitle}}</td>
-                                    <td>{{$title->description}}</td>
+                                    <td>{{Illuminate\Support\Str::limit($title->firstTitle, 10) }}</td>
+                                    <td>{{ Illuminate\Support\Str::limit($title->secendTitle, 10)}}</td>
+                                    <td>{!! Illuminate\Support\Str::limit($title->description, 10) !!}</td>
                                     <td>
                                         <a class="btn btn-outline-primary m-1 ajax  " href="{{route('admin.title.edit', $title->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
                                             <i class="m-1 fa fa-edit"></i>

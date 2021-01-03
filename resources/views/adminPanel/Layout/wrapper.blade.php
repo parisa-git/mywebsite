@@ -28,17 +28,13 @@
 
 </head>
 <body>
+@include('adminPanel.SideNav.sidnav')
 <div class="main-content">
-
     @yield('navtop')
 
-{{--    @include('adminPanel.TopNav.topnav')--}}
+    {{--    @include('adminPanel.TopNav.topnav')--}}
 
-    @include('adminPanel.SideNav.sidnav')
-
-
-
-@yield('mainContent')
+    @yield('mainContent')
 
 </div>
 
