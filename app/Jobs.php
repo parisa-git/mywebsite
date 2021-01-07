@@ -31,7 +31,7 @@ class Jobs extends Model
 
     public function states()
     {
-        return $this->belongsToMany(States::class);
+        return $this->belongsTo(States::class);
     }
 
 

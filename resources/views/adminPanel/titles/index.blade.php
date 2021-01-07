@@ -104,6 +104,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
+                            {{$allTitle->links()}}
                         </div>
                         <!-- /.card-body -->
                     </div>

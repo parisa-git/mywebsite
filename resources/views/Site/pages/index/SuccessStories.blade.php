@@ -17,7 +17,7 @@
                             <path d="M13,0l-2.4,13.3H15V28H0V13.1L4,0H13z M34,0l-2.4,13.3H36V28H20.9V13.1L25,0H34z"></path>
                         </svg>
                         <div class="quote-mary-text">
-                            <p>{{$story->story_text}}</p>
+                            <p>{!! $story->story_text !!}</p>
                         </div>
                     </div>
                     <div class="quote-mary-meta"><img class="quote-mary-avatar" src="{{ url('') }}{{$story->story_image}}" alt="" width="73" height="73"/>

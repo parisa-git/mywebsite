@@ -132,10 +132,10 @@
                                     </div>
                                 </div>
 
-                                <!-----------categories_name---------->
+                                <!-----------state_name---------->
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">دسته بندی</label>
+                                        <label for="exampleFormControlSelect1">انتخاب استان</label>
 
                                         <select class="form-control" id="state_id"
                                                 value="{{old('state_id')}}">

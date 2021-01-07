@@ -153,6 +153,23 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" id="candidates" href={{route('admin.candidates.index')}}>
+                <i class="ni ni-planet text-blue"></i>کاندید ها
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" id="posts" href={{route('admin.posts.index')}}>
+                <i class="ni ni-planet text-blue"></i>آخرین پست ها
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pricing" href={{route('admin.pricing.index')}}>
+                <i class="ni ni-planet text-blue"></i>تعرفه تبلیغات
+            </a>
+        </li>
+
     </ul>
     <!-- Divider -->
     <hr class="my-3">

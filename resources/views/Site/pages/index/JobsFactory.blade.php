@@ -20,7 +20,11 @@
                         <article class="box-line box-line_sm">
                             <div class="box-line-inner">
                                 <div class="box-line-icon icon mercury-icon-group"></div>
-                                <h5 class="box-line-title">More than 3.8 million visitors every day</h5>
+                                @foreach($titles as $title)
+                                    @if($title->id == 12)
+                                <h5 class="box-line-title">{{$title->secendTitle}}</h5>
+                                    @endif
+                                @endforeach
                             </div>
                         </article>
                     </div>
@@ -29,7 +33,11 @@
                         <article class="box-line box-line_sm">
                             <div class="box-line-inner">
                                 <div class="box-line-icon icon mercury-icon-partners"></div>
-                                <h5 class="box-line-title">Leading recruiting website in the US and Europe</h5>
+                                @foreach($titles as $title)
+                                    @if($title->id == 13)
+                                <h5 class="box-line-title">{{$title->secendTitle}}</h5>
+                                    @endif
+                                @endforeach
                             </div>
                         </article>
                     </div>
@@ -38,7 +46,11 @@
                         <article class="box-line box-line_sm">
                             <div class="box-line-inner">
                                 <div class="box-line-icon icon mercury-icon-chat"></div>
-                                <h5 class="box-line-title">24\7 Dedicated and free Support</h5>
+                                @foreach($titles as $title)
+                                    @if($title->id == 14)
+                                <h5 class="box-line-title">{{$title->secendTitle}}</h5>
+                                @endif
+                                @endforeach
                             </div>
                         </article>
                     </div>
@@ -47,7 +59,11 @@
                         <article class="box-line box-line_sm">
                             <div class="box-line-inner">
                                 <div class="box-line-icon icon mercury-icon-target"></div>
-                                <h5 class="box-line-title">Only relevant and verified vacancies </h5>
+                                @foreach($titles as $title)
+                                    @if($title->id == 15)
+                                <h5 class="box-line-title">{{$title->secendTitle}}</h5>
+                                    @endif
+                                @endforeach
                             </div>
                         </article>
                     </div>

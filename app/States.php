@@ -15,4 +15,8 @@ class States extends Model
     {
         return $this->belongsToMany(JobCategories::class);
     }
+    public function jobs()
+    {
+        return $this->belongsToMany(Jobs::class);
+    }
 }

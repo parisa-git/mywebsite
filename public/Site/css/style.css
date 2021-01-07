@@ -1720,7 +1720,7 @@ html .list-inline-md > * {
 	.ll-item::after {
 		content: '';
 		position: absolute;
-		left: calc(50% - 5px);
+		right: calc(50% - 5px);
 		z-index: 10;
 		width: calc(100% - 90px);
 		padding-bottom: 20.48193%;
@@ -1744,7 +1744,7 @@ html .list-inline-md > * {
 
 @media (min-width: 1200px) {
 	.ll-item::after {
-		margin-left: 80px;
+		margin-right: 80px;
 		width: calc(100% - 150px);
 	}
 	.ll-item:nth-child(even)::after {

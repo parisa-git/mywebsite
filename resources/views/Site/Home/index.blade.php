@@ -23,7 +23,7 @@
 
     @include('Site.pages.index.Categorie')
 
-    @include('Site.pages.index.RecentJobs')
+    @include('Site.pages.index.NewCandidates')
 
     @include('Site.pages.index.SuccessStories')
 
@@ -32,8 +32,6 @@
     @include('Site.pages.index.Steps')
 
     @include('Site.pages.index.LatestPosts')
-
-    @include('Site.pages.index.CTA')
 
     @include('Site.Layout.footer')
 </div>

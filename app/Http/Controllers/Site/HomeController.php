@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Candidates;
+use App\Companies;
 use App\Http\Controllers\Controller;
 use App\JobCategories;
+use App\Jobs;
+use App\LatestPosts;
+use App\Pricing;
 use App\States;
 use App\Stories;
 use App\Title;
@@ -22,7 +27,21 @@ class HomeController extends Controller
         $allJobCategories = JobCategories::all();
         $allStories = Stories::all();
         $allstates=States::all();
-        return view('Site.Home.index', compact('titles', 'allJobCategories','allStories','allstates'));
+        $allCompanies=Companies::all();
+        $jobs= Jobs::all();
+        $allCandidates=Candidates::all();
+        $allPricing=Pricing::all();
+        $allLatestPosts=LatestPosts::all();
+        return view('Site.Home.index', compact('titles',
+            'allJobCategories',
+            'allStories',
+            'allstates',
+            'allCompanies',
+            'jobs',
+            'allCandidates',
+            'allPricing',
+            'allLatestPosts'
+        ));
     }
 
     /**
@@ -54,7 +73,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

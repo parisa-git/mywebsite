@@ -1,7 +1,12 @@
 <!-- Steps-->
-<section class="section section-md bg-default text-center">
+<section class="section section-md bg-default text-center direction">
     <div class="container">
-        <h3>Just 3 Easy Steps to New Capabilities</h3>
+        @foreach($titles as $title)
+
+            @if($title->id == 8)
+                <h3>{{$title->firstTitle}}</h3>
+            @endif
+        @endforeach
         <ul class="list-linked">
             <li class="ll-item">
                 <div class="icon ll-item-icon thin-icon-email-search">
@@ -10,8 +15,12 @@
                     </svg>
                 </div>
                 <div class="ll-item-main">
-                    <h5 class="ll-item-title"><a href="job-listing.html">Browse Jobs</a></h5>
-                    <p>Easy search by category</p>
+                    @foreach($titles as $title)
+                    @if($title->id == 9)
+                    <h5 class="ll-item-title"><a href="job-listing.html">{{$title->firstTitle}}</a></h5>
+                    <p>{{$title->secendTitle}}</p>
+                    @endif
+                    @endforeach
                 </div>
             </li>
             <li class="ll-item">
@@ -21,8 +30,12 @@
                     </svg>
                 </div>
                 <div class="ll-item-main">
-                    <h5 class="ll-item-title"><a href="job-details.html">Find Your Vacancy</a></h5>
-                    <p>Choose a suitable job</p>
+                    @foreach($titles as $title)
+                    @if($title->id == 10)
+                    <h5 class="ll-item-title"><a href="job-details.html">{{$title->firstTitle}}</a></h5>
+                    <p>{{$title->secendTitle}}</p>
+                    @endif
+                    @endforeach
                 </div>
             </li>
             <li class="ll-item">
@@ -32,8 +45,12 @@
                     </svg>
                 </div>
                 <div class="ll-item-main">
-                    <h5 class="ll-item-title"><a href="submit-resume.html">Submit Resume</a></h5>
-                    <p>Get a personal job offer</p>
+                    @foreach($titles as $title)
+                    @if($title->id == 11)
+                    <h5 class="ll-item-title"><a href="submit-resume.html">{{$title->firstTitle}}</a></h5>
+                    <p>{{$title->secendTitle}}</p>
+                    @endif
+                    @endforeach
                 </div>
             </li>
             <li class="ll-item">
@@ -42,8 +59,9 @@
                         <circle cx="50" cy="50" r="50" fill="none" vector-effect="non-scaling-stroke"></circle>
                     </svg>
                 </div>
-                <div class="ll-item-main"><a class="button button-sm button-primary-outline" href="job-listing.html">Start Now</a></div>
+                <div class="ll-item-main"><a class="button button-sm button-primary-outline" href="job-listing.html">الان شروع کن</a></div>
             </li>
         </ul>
+
     </div>
 </section>

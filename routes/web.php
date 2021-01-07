@@ -22,7 +22,7 @@ Route::group(['prefix'=>'/','namespace'=>'site'],function (){
 });
 
 Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
-    Route::get('','HomeController@index')->name('dashbord');
+    Route::get('','HomeController@index')->name('dashbord')->middleware('auth');
 
     Route::group(['prefix'=>'/title'],function (){
         Route::get('','TitleController@index')->name('admin.title.index');
@@ -33,7 +33,6 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::get('/destroy/{id}' , 'TitleController@destroy')->name('admin.title.destroy');
         Route::post('/save_image' , 'TitleController@uploadImage');
     });
-
 
     Route::group(['prefix'=>'/jobcategories'],function (){
         Route::get('','JobCategoriesController@index')->name('admin.categories.index');
@@ -55,7 +54,6 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::post('/save_image' , 'JobsController@uploadImage');
     });
 
-
     Route::group(['prefix'=>'/companies'],function (){
         Route::get('','CompaniesController@index')->name('admin.companies.index');
         Route::get('/create','CompaniesController@create')->name('admin.companies.create');
@@ -66,7 +64,6 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::post('/save_image' , 'CompaniesController@uploadImage');
     });
 
-
     Route::group(['prefix'=>'/works'],function (){
         Route::get('','WorksController@index')->name('admin.works.index');
         Route::get('/create','WorksController@create')->name('admin.works.create');
@@ -76,7 +73,6 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::get('/destroy/{id}' , 'WorksController@destroy')->name('admin.works.destroy');
         Route::post('/save_image' , 'WorksController@uploadImage');
     });
-
 
     Route::group(['prefix'=>'/stories'],function (){
         Route::get('','StoriesController@index')->name('admin.stories.index');
@@ -97,6 +93,7 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::get('/destroy/{id}' , 'AboutUsController@destroy')->name('admin.aboutus.destroy');
         Route::post('/save_image' , 'AboutUsController@uploadImage');
     });
+
     Route::group(['prefix'=>'/state'],function (){
         Route::get('','StatesController@index')->name('admin.state.index');
         Route::get('/create','StatesController@create')->name('admin.state.create');
@@ -107,8 +104,41 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::post('/save_image' , 'StatesController@uploadImage');
     });
 
+    Route::group(['prefix'=>'/candidates'],function (){
+        Route::get('','CandidatesController@index')->name('admin.candidates.index');
+        Route::get('/create','CandidatesController@create')->name('admin.candidates.create');
+        Route::post('/store','CandidatesController@store')->name('admin.candidates.store');
+        Route::get('/edit/{id}','CandidatesController@edit')->name('admin.candidates.edit');
+        Route::post('/update/{id}' , 'CandidatesController@update')->name('admin.candidates.update');
+        Route::get('/destroy/{id}' , 'CandidatesController@destroy')->name('admin.candidates.destroy');
+        Route::post('/save_image' , 'CandidatesController@uploadImage');
+    });
+
+    Route::group(['prefix'=>'/pricing'],function (){
+        Route::get('','PricingController@index')->name('admin.pricing.index');
+        Route::get('/create','PricingController@create')->name('admin.pricing.create');
+        Route::post('/store','PricingController@store')->name('admin.pricing.store');
+        Route::get('/edit/{id}','PricingController@edit')->name('admin.pricing.edit');
+        Route::post('/update/{id}' , 'PricingController@update')->name('admin.pricing.update');
+        Route::get('/destroy/{id}' , 'PricingController@destroy')->name('admin.pricing.destroy');
+        Route::post('/save_image' , 'PricingController@uploadImage');
+    });
+
+    Route::group(['prefix'=>'/posts'],function (){
+        Route::get('','LatestPostsController@index')->name('admin.posts.index');
+        Route::get('/create','LatestPostsController@create')->name('admin.posts.create');
+        Route::post('/store','LatestPostsController@store')->name('admin.posts.store');
+        Route::get('/edit/{id}','LatestPostsController@edit')->name('admin.posts.edit');
+        Route::post('/update/{id}' , 'LatestPostsController@update')->name('admin.posts.update');
+        Route::get('/destroy/{id}' , 'LatestPostsController@destroy')->name('admin.posts.destroy');
+        Route::post('/save_image' , 'LatestPostsController@uploadImage');
+    });
 
 });
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -17,11 +17,7 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $Jobs = Jobs::all();
-//        $alljobs=Jobs::with('State')->where('id','=','2')->get();
-
-//        return $alljobs;
-//        dd($alljobs);
+        $Jobs = Jobs::paginate(5);
         return view('adminPanel.Jobs.index', compact('Jobs'));
     }
 
@@ -51,7 +47,8 @@ class JobsController extends Controller
 //            'job_img' => ['required'],
 //            'job_desc' => ['required', 'min:3', 'max:255'],
 //            'categories_id'=>['required']
-//            'state_id'=>['required']
+//            'state_id'=>['required']//
+//            'state_id'=>'required|mimes:png,jpg,jpeg,gif'
         ],
             [
 //                'job_name.required' => 'نام دسته بندی الزامیست',
@@ -109,7 +106,8 @@ else
      */
     public function show($id)
     {
-        //
+//        $alljobs=Jobs::with('Jobs')->where('id','=','state_id')->get();
+//        return view('Site.Home.index');
     }
 
     /**

@@ -18,7 +18,7 @@ class TitleController extends Controller
     public function index()
     {
 
-        $allTitle = Title::all();
+        $allTitle = Title::paginate(5);
         return view('adminPanel.titles.index', compact('allTitle'));
 
     }
