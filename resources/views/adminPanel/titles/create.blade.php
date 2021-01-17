@@ -53,7 +53,7 @@
     افزودن تیتر
 @endsection
 @section('mainContent')
-    <div class="header bg-gradient-primary pb-3 pt-4 text-right">
+    <div class="header  pb-3 pt-4 text-right">
         <div class="container-fluid">
             <div class="header-body">
                 <!-- Card stats -->
@@ -68,6 +68,7 @@
                             <li class="breadcrumb-item active">افزودن تیتر</li>
                         </ol>
                     </div><!-- /.col--->
+
                 </div>
             </div>
         </div>
@@ -95,9 +96,14 @@
                     @endif
                 </div>
 
-                <div class="card text-right" >
-                    <div class="card-header">
-                        <div class="card-title">مشخصات تیتر جدید</div>
+                <div class="card text-right ">
+                    <div class="card-header d-flex">
+                        <div class="card-title pt-3">مشخصات تیتر جدید</div>
+                        <button type="button" id="add_btn" data-toggle="modal" data-target="#addModal"
+                                class="btn btn-outline-dark btn-lg px-1" style="position: relative; right: 760px">
+                            <a class="nav-link text-dark" href= {{route('admin.title.index')}} id="fw_refresh_btn">
+                                <i class="m-1 fa fa-refresh"></i>تازه سازی</a>
+                        </button>
                     </div>
 
                     {{--    <-----------card body ------->--}}

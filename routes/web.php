@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=>'/','namespace'=>'site'],function (){
     Route::get('','HomeController@index')->name('Home');
+    Route::get('/recendjobs','JobsController@index')->name('Home.recendjobs');
+    Route::get('/aboutus','AboutUsController@index')->name('Home.aboutus');
+    Route::get('/contactus','ContactusController@index')->name('Home.contactus');
+    Route::get('/job-details/{id}','JobsController@show')->name('Home.jobdetails');
 });
 
 Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
@@ -31,6 +35,7 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::get('/edit/{id}','TitleController@edit')->name('admin.title.edit');
         Route::post('/update/{id}' , 'TitleController@update')->name('admin.title.update');
         Route::get('/destroy/{id}' , 'TitleController@destroy')->name('admin.title.destroy');
+        Route::get('/show/{id}' , 'TitleController@show')->name('admin.title.show');
         Route::post('/save_image' , 'TitleController@uploadImage');
     });
 
@@ -133,6 +138,19 @@ Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
         Route::get('/destroy/{id}' , 'LatestPostsController@destroy')->name('admin.posts.destroy');
         Route::post('/save_image' , 'LatestPostsController@uploadImage');
     });
+
+
+    Route::group(['prefix'=>'/footer'],function (){
+        Route::get('','FooterController@index')->name('admin.footer.index');
+        Route::get('/create','FooterController@create')->name('admin.footer.create');
+        Route::post('/store','FooterController@store')->name('admin.footer.store');
+        Route::get('/edit/{id}','FooterController@edit')->name('admin.footer.edit');
+        Route::post('/update/{id}' , 'FooterController@update')->name('admin.footer.update');
+        Route::get('/destroy/{id}' , 'FooterController@destroy')->name('admin.footer.destroy');
+        Route::get('/show/{id}' , 'FooterController@show')->name('admin.footer.show');
+        Route::post('/save_image' , 'FooterController@uploadImage');
+    });
+
 
 });
 

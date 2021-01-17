@@ -53,17 +53,21 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex">
-
                             <button type="button" id="add_btn" data-toggle="modal" data-target="#addModal"
-                                       class="btn btn-outline-dark btn-lg px-3"><a class="nav-link text-dark" href={{route('admin.title.create')}}>افزودن<i class="m-1 fa fa-plus"></i>
+                                    class="btn btn-outline-dark btn-lg px-1">
+                            <a class="nav-link text-dark" href= {{route('admin.title.index')}} id="fw_refresh_btn">
+                                <i class="m-1 fa fa-refresh"></i>تازه سازی</a>
+                            </button>
+                            <button type="button" id="add_btn" data-toggle="modal" data-target="#addModal"
+                                       class="btn btn-outline-dark btn-lg px-1">
+                                <a class="nav-link text-dark" href={{route('admin.title.create')}}>افزودن<i class="m-1 fa fa-plus"></i>
                                 </a>
-
                                </button>
-                            <h3 class="card-title text-right pt-3" style="position: relative; left: 650px">جدول تیترها</h3>
+                            <h3 class="card-title text-right pt-3" style="position: relative; left: 575px">جدول تیترها</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body" style="direction: rtl; overflow-x: scroll">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example2" class="table table-bordered table-hover mb-4">
                                 <thead>
                                 <tr>
                                     <th>ردیف</th>
@@ -89,6 +93,8 @@
                                         <a class="btn btn-outline-danger m-1 ajax  "  href="{{route('admin.title.destroy', $title->id)}}" data-toggle="tooltip" title="" data-original-title="حذف">
                                             <i class="m-1 fa fa-trash"></i>
                                         </a>
+                                        <a class="btn btn-outline-primary m-1 ajax  " href="{{route('admin.title.show', $title->id)}}" data-toggle="tooltip" title="" data-original-title="مشاهده">
+                                            <i class="m-1 fa fa-eye"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

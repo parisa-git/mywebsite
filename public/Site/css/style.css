@@ -1430,7 +1430,7 @@ html .list-inline-md > * {
 
 .list-marked-3 > li {
 	position: relative;
-	padding-left: 30px;
+	padding-right: 30px;
 	letter-spacing: .025em;
 }
 
@@ -1438,7 +1438,7 @@ html .list-inline-md > * {
 	content: '';
 	position: absolute;
 	top: .65em;
-	left: 0;
+	right: 0;
 	display: inline-block;
 	width: 18px;
 	height: 3px;
@@ -5010,7 +5010,7 @@ html:not(.tablet):not(.mobile) .thumbnail-classic:hover .thumbnail-classic-capti
 	position: absolute;
 	width: 1px;
 	height: 100%;
-	right: 0;
+	left: 0;
 	top: 50%;
 	transform: translate3d(0, -50%, 0);
 	background: #cbcbcb;

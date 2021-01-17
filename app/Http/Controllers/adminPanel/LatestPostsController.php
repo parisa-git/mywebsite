@@ -4,6 +4,7 @@ namespace App\Http\Controllers\adminPanel;
 
 use App\Http\Controllers\Controller;
 use App\LatestPosts;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
 
 class LatestPostsController extends Controller
@@ -76,7 +77,7 @@ class LatestPostsController extends Controller
                 'title' => $request->get('title'),
                 'image' => $image,
                 'text' => $request->get('text'),
-
+//                'created_at' => 'jdate:Y/m/d'
 
             ]);
 

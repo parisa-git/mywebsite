@@ -10,6 +10,7 @@
         @endforeach
         <div class="row row-30 row-xl-70">
             @foreach($allLatestPosts as $item)
+
             <div class="col-12 col-lg-4">
                 <!-- Post Minimal-->
                 <article class="post-minimal">
@@ -21,7 +22,8 @@
                             <a href="blog-post.html">{{$item->title}}</a>
                         </h5>
                         <p>{!! $item->text !!}</p>
-                        <time class="post-minimal-time" datetime="2019">{{$item->created_at}}</time>
+
+                        <time class="post-minimal-time" datetime="2019">{{Hekmatinasser\Verta\Verta::instance($item->created_at)->format("%Y %B %d")}}</time>
                     </div>
                 </article>
             </div>

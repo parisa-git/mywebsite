@@ -136,7 +136,8 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <lable>توضیحات زیر تیتر</lable>
-                                        <textarea rows="5" type="text" class="form-control" name="description" id="description" placeholder="توضیحات زیر تیتر را وارد کنید ..." value="{{$title->description}}">{!!$title->description !!}</textarea>
+                                        <textarea rows="5" type="text" class="form-control" name="description" id="description"
+                                        placeholder="توضیحات زیر تیتر را وارد کنید ..." value="{{$title->description}}">{!!$title->description !!}</textarea>
                                     </div>
                                 </div>
 

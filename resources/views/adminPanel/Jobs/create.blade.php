@@ -1,52 +1,3 @@
-{{--@extends('adminPanel.Layout.wrapper')--}}
-
-
-{{--@section('mainContent')--}}
-
-{{--    <div class="col-9 text-right my-5" style="direction: rtl">--}}
-{{--        <!-- general form elements -->--}}
-{{--        <div class="card card-primary" style="position: relative; right: 285px;">--}}
-{{--            <div class="card-header">--}}
-{{--                <h3 class="card-title">تیترها</h3>--}}
-{{--            </div>--}}
-{{--            <!-- /.card-header -->--}}
-{{--            <!-- form start -->--}}
-{{--            <form role="form">--}}
-{{--                <div class="card-body">--}}
-{{--                    <div class="form-group">--}}
-{{--                        <label for="exampleInputEmail1">محل تیتر</label>--}}
-{{--                        <input type="text" class="form-control" id="exampleInputEmail1"--}}
-{{--                               placeholder=" محل تیتر ">--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group">--}}
-{{--                        <label for="exampleInputEmail1"> تیتر اول</label>--}}
-{{--                        <input type="text" class="form-control" id="exampleInputEmail1"--}}
-{{--                               placeholder="تیتر اول">--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group">--}}
-{{--                        <label for="exampleInputEmail1">تیتر دوم </label>--}}
-{{--                        <input type="text" class="form-control" id="exampleInputEmail1"--}}
-{{--                               placeholder="تیتر دوم">--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group">--}}
-{{--                        <label for="exampleInputEmail1">توضیحات تیتر </label>--}}
-{{--                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="توضیحات تیتر"></textarea>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="card-footer">--}}
-{{--                        <button type="submit" class="btn btn-primary">ارسال</button>--}}
-{{--                    </div>--}}
-
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--        <!-- /.card -->--}}
-
-{{--    </div>--}}
-{{--@endsection--}}
 
 @extends('adminPanel.Layout.wrapper')
 @section('pageTitle')
@@ -114,13 +65,36 @@
                                 <!-----------job_name---------->
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <lable>نام دسته بندی</lable>
+                                        <lable>نام شغل</lable>
                                         <input type="text" class="form-control" name="job_name"
-                                               placeholder="محل قرارگیری تیتر را وارد کنید ..."
+                                               placeholder="شغل را وارد کنید ..."
                                                value="{{old('job_name')}}">
                                     </div>
 
                                 </div>
+
+                                <!-----------job_money---------->
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <lable>حقوق حدودی</lable>
+                                        <input type="text" class="form-control" name="job_money"
+                                               placeholder="حقوق حدودی را وارد کنید ..."
+                                               value="{{old('job_money')}}">
+                                    </div>
+
+                                </div>
+
+                                <!-----------job_time---------->
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <lable>نوع ساعت کاری</lable>
+                                        <input type="text" class="form-control" name="job_time"
+                                               placeholder="نوع ساعت کاری را وارد کنید ..."
+                                               value="{{old('job_time')}}">
+                                    </div>
+
+                                </div>
+
                                 <!-----------categories_name---------->
                                 <div class="col-sm-4">
                                     <div class="form-group">
@@ -161,6 +135,38 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <!----------job_email----------->
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <lable>ایمیل</lable>
+                                        <input type="email" class="form-control" name="job_email"
+                                               placeholder="ایمیل را وارد کنید ..."
+                                               value="{{old('job_email')}}">
+                                    </div>
+
+                                </div>
+
+                                <!----------job_skill----------->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <lable>مهارت </lable>
+                                        <textarea rows="5" type="text" class="form-control" name="job_skill"
+                                                  placeholder="مهارت را وارد کنید ..."></textarea>
+                                    </div>
+
+                                </div>
+
+
+                                <!----------job_more----------->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <lable>موارد بیشتر</lable>
+                                        <textarea rows="5" type="text" class="form-control" name="job_more"
+                                               placeholder="موارد بیشتر را وارد کنید ..."></textarea>
+                                    </div>
+
                                 </div>
 
                                 <!-----------job_desc---------->

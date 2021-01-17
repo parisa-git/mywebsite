@@ -170,6 +170,12 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" id="footer" href={{route('admin.footer.index')}}>
+                <i class="ni ni-planet text-blue"></i>فوتر
+            </a>
+        </li>
+
     </ul>
     <!-- Divider -->
     <hr class="my-3">

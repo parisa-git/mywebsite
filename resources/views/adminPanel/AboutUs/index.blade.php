@@ -53,12 +53,12 @@
                     <div class="card">
                         <div class="card-header d-flex">
 
-                            <button type="button" id="add_btn" data-toggle="modal" data-target="#addModal"
-                                    class="btn btn-outline-dark btn-lg px-3"><a class="nav-link text-dark" href={{route('admin.aboutus.create')}}>افزودن<i class="m-1 fa fa-plus"></i>
-                                </a>
+{{--                            <button type="button" id="add_btn" data-toggle="modal" data-target="#addModal"--}}
+{{--                                    class="btn btn-outline-dark btn-lg px-3"><a class="nav-link text-dark" href={{route('admin.aboutus.create')}}>افزودن<i class="m-1 fa fa-plus"></i>--}}
+{{--                                </a>--}}
 
-                            </button>
-                            <h3 class="card-title text-right pt-3" style="position: relative; left: 550px">جدول شرکت ها</h3>
+{{--                            </button>--}}
+                            <h3 class="card-title text-right pt-3" style="position: relative; left: 550px">جدول درباره ما</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body" style="direction: rtl; overflow-x: scroll">
@@ -79,18 +79,15 @@
                                 @foreach($allAboutUs as $items)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$items->about_title}}</td>
+                                        <td>{!! Illuminate\Support\Str::limit( $items->about_title, 10) !!}</td>
                                         <td>{{$items->about_phone}}</td>
-                                        <td>{{$items->about_address}}</td>
+                                        <td>{!! Illuminate\Support\Str::limit( $items->about_address, 10) !!}</td>
                                         <td>{{$items->about_office}}</td>
                                         <td><img width="100px" src="{{ url('') }}{{$items->about_image}}" alt="{{$items->about_image}}"></td>
-                                        <td>{!! $items->about_desc !!}</td>
+                                        <td>{!! Illuminate\Support\Str::limit( $items->about_desc, 10) !!}</td>
                                         <td>
                                             <a class="btn btn-outline-primary m-1 ajax  " href="{{route('admin.aboutus.edit', $items->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
                                                 <i class="m-1 fa fa-edit"></i>
-                                            </a>
-                                            <a class="btn btn-outline-danger m-1 ajax  "  href="{{route('admin.aboutus.destroy', $items->id)}}" data-toggle="tooltip" title="" data-original-title="حذف">
-                                                <i class="m-1 fa fa-trash"></i>
                                             </a>
                                         </td>
                                     </tr>

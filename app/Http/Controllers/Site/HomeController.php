@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Candidates;
 use App\Companies;
+use App\Footer;
 use App\Http\Controllers\Controller;
 use App\JobCategories;
 use App\Jobs;
@@ -12,8 +13,8 @@ use App\Pricing;
 use App\States;
 use App\Stories;
 use App\Title;
+use Verta;
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
@@ -32,6 +33,9 @@ class HomeController extends Controller
         $allCandidates=Candidates::all();
         $allPricing=Pricing::all();
         $allLatestPosts=LatestPosts::all();
+        $allStates=States::all();
+        $footer=Footer::all();
+        $v = new Verta();
         return view('Site.Home.index', compact('titles',
             'allJobCategories',
             'allStories',
@@ -40,7 +44,10 @@ class HomeController extends Controller
             'jobs',
             'allCandidates',
             'allPricing',
-            'allLatestPosts'
+            'allLatestPosts',
+            'verta',
+            'allStates',
+            'footer'
         ));
     }
 

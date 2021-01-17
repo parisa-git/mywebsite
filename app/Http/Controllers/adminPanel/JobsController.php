@@ -44,6 +44,11 @@ class JobsController extends Controller
         $this->validate($request, [
 
 //            'job_name' => ['required', 'min:3', 'max:255'],
+//            'job_money' => ['required', 'min:3', 'max:255'],
+//            'job_email' => ['required', 'min:3', 'max:255'],
+//            'job_skill' => ['required', 'min:3', 'max:255'],
+//            'job_more' => ['required', 'min:3', 'max:255'],
+//            'job_time' => ['required', 'min:3', 'max:255'],
 //            'job_img' => ['required'],
 //            'job_desc' => ['required', 'min:3', 'max:255'],
 //            'categories_id'=>['required']
@@ -54,6 +59,15 @@ class JobsController extends Controller
 //                'job_name.required' => 'نام دسته بندی الزامیست',
                 'job_name.min' => 'نام دسته بندی نمیتوتند کمتر از سه کاراکتر باشد',
                 'job_name.max' => 'نام دسته بندی در سایت نمیتوتند بیشتر از 255 کاراکتر باشد',
+
+                //                'job_money.required' => 'نام دسته بندی الزامیست',
+                'job_money.min' => 'نام دسته بندی نمیتوتند کمتر از سه کاراکتر باشد',
+                'job_money.max' => 'نام دسته بندی در سایت نمیتوتند بیشتر از 255 کاراکتر باشد',
+
+                //                'job_time.required' => 'نام دسته بندی الزامیست',
+                'job_time.min' => 'نام دسته بندی نمیتوتند کمتر از سه کاراکتر باشد',
+                'job_time.max' => 'نام دسته بندی در سایت نمیتوتند بیشتر از 255 کاراکتر باشد',
+
 
 //                'job_img'=>'تصویر محصول الزامی است',
 
@@ -84,6 +98,11 @@ class JobsController extends Controller
 
             Jobs::create([
                 'job_name' => $request->get('job_name'),
+                'job_money' => $request->get('job_money'),
+                'job_email' => $request->get('job_email'),
+                'job_skill' => $request->get('job_skill'),
+                'job_more' => $request->get('job_more'),
+                'job_time' => $request->get('job_time'),
                 'job_img' => $job_img,
                 'job_desc' => $request->get('job_desc'),
                 'categories_id'=>$request->get('categories_id'),
@@ -119,8 +138,9 @@ else
     public function edit($id)
     {
         $allCategories = JobCategories::all();
+        $allStates = States::all();
         $Jobs = Jobs::findorfail($id);
-        return view('adminPanel.Jobs.edit' , compact('Jobs','allCategories'));
+        return view('adminPanel.Jobs.edit' , compact('Jobs','allCategories','allStates'));
     }
 
     /**
@@ -135,10 +155,12 @@ else
 
         $this->validate($request, [
 
-            'job_name' => ['required', 'min:3', 'max:255'],
-            'job_img' => ['required'],
-            'job_desc' => ['required', 'min:3', 'max:255'],
-            'categories_id'=>['required']
+//            'job_name' => ['required', 'min:3', 'max:255'],
+         //  'job_money' => ['required', 'min:3', 'max:255'],
+//          'job_time' => ['required', 'min:3', 'max:255'],
+//            'job_img' => ['required'],
+//            'job_desc' => ['required', 'min:3', 'max:255'],
+//            'categories_id'=>['required']
         ],
             [
 //                'job_name.required' => 'نام دسته بندی الزامیست',
@@ -173,7 +195,7 @@ else
             $thumbnail = $job_img;
 
         } else {
-            $job_img = $Jobs->cat_icon;
+            $job_img = $Jobs->job_img;
             $thumbnail = $job_img;
         }
 
@@ -181,6 +203,11 @@ else
 
         $Jobs->update([
             'job_name' => $request->get('job_name'),
+            'job_money' => $request->get('job_money'),
+            'job_email' => $request->get('job_email'),
+            'job_skill' => $request->get('job_skill'),
+            'job_more' => $request->get('job_more'),
+            'job_time' => $request->get('job_time'),
             'categories_id' => $request->get('categories_id'),
             'job_img' => $job_img,
             'job_desc' => $request->get('job_desc'),

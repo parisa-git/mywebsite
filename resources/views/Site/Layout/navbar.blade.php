@@ -17,10 +17,10 @@
                         </button>
                         <!-- RD Navbar Brand-->
                         <div class="rd-navbar-brand">
-                            <!--Brand--><a class="brand" href="index.blade.php"><img class="brand-logo-dark"
-                                                                                     src={{asset("Site/images/logo-default-286x52.png")}} alt=""
-                                                                                     width="143" height="26"/><img
-                                    class="brand-logo-light" src="images/logo-inverse-286x52.png" alt="" width="143"
+                            <!--Brand--><a class="brand" href="index.blade.php">
+                                <img class="brand-logo-dark" src={{asset("Site/images/logo-default-286x52.png")}} alt=""
+                                     width="143" height="26"/>
+                                <img class="brand-logo-light" src="images/logo-inverse-286x52.png" alt="" width="143"
                                     height="26"/></a>
                         </div>
                     </div>
@@ -28,13 +28,16 @@
                         <div class="rd-navbar-nav-wrap " style="direction: rtl">
                             <ul class="rd-navbar-nav">
 
-                                <li class="rd-nav-item ml-5"><a class="rd-nav-link" href="#">صفحه اصلی</a>
+                                <li class="rd-nav-item ml-5"><a class="rd-nav-link" href="{{route('Home')}}">صفحه اصلی</a>
 
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">درباره ما</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.aboutus')}}">درباره ما</a>
 
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">تماس با ما</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.contactus')}}">تماس با ما</a>
+
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.recendjobs')}}">مشاغل</a>
 
                                 </li>
                             </ul>
@@ -128,7 +131,7 @@
                                     </form>
                                 </div>
                             </div>
-                           
+
                             @if (Route::has('register'))
                                 <div class="rd-navbar-aside-item">
                                     <button
@@ -231,6 +234,8 @@
             </div>
         </nav>
     </div>
+
+
     <div class="jumbotron-creative-inner">
         <div class="container">
             <div class="jumbotron-creative-main">
@@ -266,18 +271,18 @@
                         </div>
                         <div class="form-wrap form-wrap-button form-wrap-button-icon-only">
                             <button class="button button-lg button-primary button-icon-only" type="submit"
-                                    aria-label="search"><span class="icon icon-4 fl-bigmug-line-search74"></span>
+                                        aria-label="search">
+                                <a href="{{route('Home.recendjobs')}}">
+                                    جستوجو
+{{--                                    <span class="icon icon-4 fl-bigmug-line-search74"></span>--}}
+                                </a>
                             </button>
                         </div>
                     </form>
                 </div>
-                {{--                    @foreach($jobs as $job)--}}
-                {{--                        <p class="big text-gray-800"><a href="job-listing.html">{{$job->job_name}}</p>--}}
-                {{--                        <p class="big text-gray-800"><a href="job-listing.html">{{$job->categories_id}}</p>--}}
-                {{--                        <p class="big text-gray-800"><a href="job-listing.html">{{$job->state_id}}</p>--}}
-                {{--                    @endforeach--}}
             </div>
         </div>
+
         <div class="jc-decoration">
             <div class="jc-decoration-item jc-decoration-item-1">
                 <svg version="1.1" x="0px" y="0px" viewbox="0 0 1446 970" width="1446" height="970"
@@ -298,149 +303,4 @@
         </div>
     </div>
 </header>
-
-
-{{--@guest--}}
-
-{{--    <div class="rd-navbar-aside-item">--}}
-{{--        <button--}}
-{{--            class="button button-xs button-primary-outline button-icon button-icon-left rd-navbar-popup-toggle"--}}
-{{--            data-rd-navbar-toggle="#rd-navbar-register"><span--}}
-{{--                class="icon mdi mdi-account"></span>عضویت--}}
-{{--        </button>--}}
-{{--        <div class="rd-navbar-popup bg-gray-100" id="rd-navbar-register">--}}
-{{--            <h5 class="rd-navbar-popup-title">عضویت</h5>--}}
-{{--            <form class="rd-form rd-mailform form-compact" data-form-output="form-output-global"--}}
-{{--                  data-form-type="contact" method="POST" action="{{ route('register') }}">--}}
-{{--                @csrf--}}
-{{--                <div class="form-wrap">--}}
-{{--                    <input id="name" type="text" class="form-input form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>--}}
-{{--                    <label class="form-label" for="name">{{ __('Name') }}</label>--}}
-
-{{--                    @error('name')--}}
-{{--                    <span class="invalid-feedback" role="alert">--}}
-{{--                                                <strong>{{ $message }}</strong>--}}
-{{--                                            </span>--}}
-{{--                    @enderror--}}
-{{--                </div>--}}
-{{--                <div class="form-wrap">--}}
-{{--                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">--}}
-{{--                    <label class="form-label" for="email">{{ __('E-Mail Address') }}</label>--}}
-{{--                    @error('email')--}}
-{{--                    <span class="invalid-feedback" role="alert">--}}
-{{--                                                    <strong>{{ $message }}</strong>--}}
-{{--                                            </span>--}}
-{{--                    @enderror--}}
-{{--                </div>--}}
-{{--                <div class="form-wrap">--}}
-{{--                    <label class="form-label" for="password">{{ __('Password') }}</label>--}}
-{{--                    <input id="password" type="password" class="form-input form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">--}}
-
-{{--                    @error('password')--}}
-{{--                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                    @enderror--}}
-{{--                </div>--}}
-{{--                <div class="form-wrap">--}}
-{{--                    <input class="form-input" id="password-confirm"--}}
-{{--                           type="password" name="password-confirm"--}}
-{{--                           data-constraints="@Required"/>--}}
-{{--                    <label class="form-label" for="password-confirm">{{ __('Confirm Password') }} </label>--}}
-{{--                </div>--}}
-{{--                <div class="form-wrap">--}}
-{{--                    <button class="button button-block button-primary" type="submit">--}}
-{{--                        --}}{{--                                                {{ __('Register') }}--}}
-{{--                        ورود--}}
-{{--                    </button>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    @if (Route::has('register'))--}}
-{{--        <div class="rd-navbar-aside-item">--}}
-{{--            <button--}}
-{{--                class="button button-xs button-primary button-icon button-icon-left rd-navbar-popup-toggle"--}}
-{{--                data-rd-navbar-toggle="#rd-navbar-login"><span--}}
-{{--                    class="icon mdi mdi-import"></span> <i class="fas fa-sign-in-alt"></i>ورود--}}
-{{--            </button>--}}
-{{--            <div class="rd-navbar-popup bg-gray-100" id="rd-navbar-login">--}}
-{{--                <h5 class="rd-navbar-popup-title">ورود</h5>--}}
-{{--                <form class="rd-form form-compact" method="get"  action="{{ route('login') }}">--}}
-{{--                    @csrf--}}
-{{--                    <div class="form-wrap">--}}
-{{--                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>--}}
-
-{{--                        @error('email')--}}
-{{--                        <span class="invalid-feedback" role="alert">--}}
-{{--                                                 <strong>{{ $message }}</strong>--}}
-{{--                                                </span>--}}
-{{--                        @enderror--}}
-{{--                        <label class="form-label" for="emaill">{{ __('E-Mail Address') }}</label>--}}
-{{--                    </div>--}}
-{{--                    <div class="form-wrap">--}}
-{{--                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">--}}
-
-{{--                        @error('password')--}}
-{{--                        <span class="invalid-feedback" role="alert">--}}
-{{--                                                     <strong>{{ $message }}</strong>--}}
-{{--                                                </span>--}}
-{{--                        @enderror--}}
-{{--                        <label class="form-label"--}}
-{{--                               for="password">{{ __('Password') }}</label>--}}
-{{--                    </div>--}}
-{{--                    <div class="form-group row">--}}
-{{--                        <div class="col-md-6 offset-md-4">--}}
-{{--                            <div class="form-check">--}}
-{{--                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
-
-{{--                                <label class="form-check-label" for="remember">--}}
-{{--                                    {{ __('Remember Me') }}--}}
-{{--                                </label>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="form-group row mb-0">--}}
-{{--                        <div class="col-md-8 offset-md-4">--}}
-{{--                            <button type="submit" class="btn btn-primary">--}}
-{{--                                --}}{{--                                                        {{ __('Login') }}--}}
-{{--                                ارسال--}}
-{{--                            </button>--}}
-
-{{--                            @if (Route::has('password.request'))--}}
-{{--                                <a class="btn btn-link" href="{{ route('password.request') }}">--}}
-{{--                                    {{ __('Forgot Your Password?') }}--}}
-{{--                                </a>--}}
-{{--                            @endif--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    --}}{{--                                            <div class="form-wrap">--}}
-{{--                    --}}{{--                                                <button class="button button-block button-primary" type="submit">--}}
-{{--                    --}}{{--                                                    Login--}}
-{{--                    --}}{{--                                                </button>--}}
-{{--                    --}}{{--                                            </div>--}}
-{{--                </form>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    @endif--}}
-{{--@else--}}
-{{--    <li class="nav-item dropdown">--}}
-{{--        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"--}}
-{{--           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-{{--            {{ Auth::user()->name }}--}}
-{{--        </a>--}}
-
-{{--        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-{{--            <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--               onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-{{--                {{ __('Logout') }}--}}
-{{--            </a>--}}
-
-{{--            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">--}}
-{{--                @csrf--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </li>--}}
-{{--@endguest--}}
+@include('Site.pages.index.recendjobs')

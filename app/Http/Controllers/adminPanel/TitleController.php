@@ -81,7 +81,8 @@ class TitleController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = Title::findorfail($id);
+        return view('adminPanel.titles.show' , compact('title'));
     }
 
     /**

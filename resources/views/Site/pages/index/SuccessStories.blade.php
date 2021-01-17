@@ -1,5 +1,7 @@
 <!-- Success Stories-->
-<section class="parallax-container section-md bg-primary bg-overlay-1 text-center" data-parallax-img="images/bg-image-7.jpg">
+<section class="parallax-container section-md bg-primary bg-overlay-1 text-center" data-parallax-img=>
+    <div class="material-parallax parallax"><img src="{{asset('Site/images/bg-image-7.jpg')}}" alt="" style="display: block; transform: translate3d(-50%, 183px, 0px) rotate(0.1deg);"></div>
+
     <div class="parallax-content">
         <div class="container">
             @foreach($titles as $title)

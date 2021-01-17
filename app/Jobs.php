@@ -9,6 +9,11 @@ class Jobs extends Model
     protected $fillable = [
         'job_name',
         'job_img',
+        'job_money',
+        'job_time',
+        'job_email',
+        'job_skill',
+        'job_more',
         'job_desc',
         'categories_id',
         'state_id'
