@@ -87,7 +87,7 @@
                                     <td>{{ Illuminate\Support\Str::limit($title->secendTitle, 10)}}</td>
                                     <td>{!! Illuminate\Support\Str::limit($title->description, 10) !!}</td>
                                     <td>
-                                        <a class="btn btn-outline-primary m-1 ajax  " href="{{route('admin.title.edit', $title->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
+                                        <a class="btn btn-outline-success m-1 ajax  " href="{{route('admin.title.edit', $title->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
                                             <i class="m-1 fa fa-edit"></i>
                                         </a>
                                         <a class="btn btn-outline-danger m-1 ajax  "  href="{{route('admin.title.destroy', $title->id)}}" data-toggle="tooltip" title="" data-original-title="حذف">

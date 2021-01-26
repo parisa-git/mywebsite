@@ -40,6 +40,9 @@
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.recendjobs')}}">مشاغل</a>
 
                                 </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.pricing')}}">تعرفه ها</a>
+
+                                </li>
                             </ul>
                         </div>
                     </div>

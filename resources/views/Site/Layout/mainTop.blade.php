@@ -28,21 +28,25 @@
                         <div class="rd-navbar-nav-wrap " style="direction: rtl">
                             <ul class="rd-navbar-nav">
 
-                                <li class="rd-nav-item ml-5"><a class="rd-nav-link" href="#">صفحه اصلی</a>
+                                <li class="rd-nav-item ml-5"><a class="rd-nav-link" href="{{route('Home')}}">صفحه اصلی</a>
 
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">درباره ما</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.aboutus')}}">درباره ما</a>
 
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">تماس با ما</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.contactus')}}">تماس با ما</a>
 
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.recendjobs')}}">مشاغل</a>
 
                                 </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('Home.pricing')}}">تعرفه ها</a>
+
+                                </li>
                             </ul>
                         </div>
                     </div>
+
                     <div class="rd-navbar-aside">
 
 
@@ -54,6 +58,7 @@
                                         class="icon mdi mdi-account"></span>عضویت
                                 </button>
                                 <div class="rd-navbar-popup bg-gray-100" id="rd-navbar-register">
+
                                     <form method="POST" action="{{ route('register') }}">
                                         @csrf
 

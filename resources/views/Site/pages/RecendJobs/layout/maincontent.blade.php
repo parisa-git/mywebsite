@@ -6,18 +6,31 @@
                 <select class="form-input select" id="form-region" data-placeholder="All Regions"
                         name="region" data-minimum-results-for-search="Infinity"
                         data-constraints="@Selected">
-                    @foreach($allJobCategories as $cat)
-                        <option selected value="{{$cat->id}}">{{$cat->cat_name}}</option>
-                    @endforeach
+{{--                    @foreach($allJobCategories as $cat)--}}
+{{--                        <option selected value="{{$cat->id}}">{{$cat->cat_name}}</option>--}}
+{{--                    @endforeach--}}
+
+
+                        @foreach($allJobCategories as $cat)
+                            <option value="{{$cat->id}}">{{$cat->cat_name}}</option>
+                        @endforeach
+
                 </select></div>
             <div class="form-wrap form-wrap-icon form-wrap-select ">
                 <!-- Select 2-->
                 <select class="form-input select" id="form-region" data-placeholder="All Regions"
                         name="region" data-minimum-results-for-search="Infinity"
                         data-constraints="@Selected">
-                    @foreach($allStates as $state)
-                        <option selected value="{{$state->id}}">{{$state->name}}</option>
+{{--                    @foreach($allStates as $state )--}}
+{{--                        <option selected value="{{$state->id}}">{{$state->name}}</option>--}}
+{{--                    @endforeach--}}
+
+
+
+                    @foreach($allStates as $state )
+                        <option  value="{{$state->id}}">{{$state->name}}</option>
                     @endforeach
+
                 </select>
                 <span class="icon fl-bigmug-line-big104"></span>
             </div>
@@ -67,7 +80,7 @@
             </div>
             <div class="col-lg-8 col-xl-9 text-right direction">
                 <table class="table-job-listing table-responsive">
-                    @foreach($jobs as $item)
+                    @foreach($latest as $item)
                         <a href="">
                             <tr>
                                 <td class="table-job-offers-date"><span>{{Hekmatinasser\Verta\Verta::instance($item->created_at)->formatDifference()}}</span></td>

@@ -22,8 +22,17 @@ Route::group(['prefix'=>'/','namespace'=>'site'],function (){
     Route::get('/recendjobs','JobsController@index')->name('Home.recendjobs');
     Route::get('/aboutus','AboutUsController@index')->name('Home.aboutus');
     Route::get('/contactus','ContactusController@index')->name('Home.contactus');
-    Route::get('/job-details/{id}','JobsController@show')->name('Home.jobdetails');
+    Route::get('/pricing','PricingController@index')->name('Home.pricing');
+//    Route::post('/contactus','ContactusController@store')->name('send.email');
+//    Route::get('/sendemail','ContactusController@index')->name('Home.contactus');
+//    Route::post('/sendemail/send','ContactusController@send')->name('send.email');
+    Route::get('/job-details/{id}','JobsController@show')->name('Home.jobdetails')->middleware('auth');
+    Route::group(['prefix'=>'/title'],function (){
+
+    });
 });
+
+
 
 Route::group(['prefix'=>'/dashboard','namespace'=>'adminPanel'],function (){
     Route::get('','HomeController@index')->name('dashbord')->middleware('auth');

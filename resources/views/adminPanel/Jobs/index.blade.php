@@ -105,6 +105,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
+                            {{$Jobs->links()}}
                         </div>
                         <!-- /.card-body -->
                     </div>

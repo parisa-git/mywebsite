@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Site;
+namespace App\Http\Controllers\adminPanel;
 
-use App\AboutUs;
-use App\Footer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ContactusController extends Controller
+class SendEmailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,14 +14,20 @@ class ContactusController extends Controller
      */
     public function index()
     {
-        $footer= Footer::all();
-        $aboutus=AboutUs::all();
-        return view('Site.pages.ContactUs.index',
-        compact(
-            'footer',
-            'aboutus'
-        ));
+        return view('Site.pages.ContactUs.index');
     }
+
+//    public function send(Request $request)
+//    {
+//        $this->validate($request,[
+//
+//
+//                'name' => ['required', 'min:3', 'max:255'],
+//                'email' => ['required', 'min:3', 'max:255'],
+//                'phone' => ['required', 'min:3', 'max:255'],
+//                'message' => ['required', 'min:3', 'max:255'],
+//        ]);
+//    }
 
     /**
      * Show the form for creating a new resource.

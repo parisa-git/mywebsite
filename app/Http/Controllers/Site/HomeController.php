@@ -13,6 +13,7 @@ use App\Pricing;
 use App\States;
 use App\Stories;
 use App\Title;
+use Illuminate\Support\Facades\DB;
 use Verta;
 use Illuminate\Http\Request;
 class HomeController extends Controller
@@ -35,7 +36,7 @@ class HomeController extends Controller
         $allLatestPosts=LatestPosts::all();
         $allStates=States::all();
         $footer=Footer::all();
-        $v = new Verta();
+        $latest=DB::table('jobs')->orderBy('id','desc')->take(5)->get();
         return view('Site.Home.index', compact('titles',
             'allJobCategories',
             'allStories',
@@ -47,7 +48,8 @@ class HomeController extends Controller
             'allLatestPosts',
             'verta',
             'allStates',
-            'footer'
+            'footer',
+            'latest'
         ));
     }
 

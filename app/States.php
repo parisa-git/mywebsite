@@ -11,10 +11,10 @@ class States extends Model
 
     ];
 
-    public function jobcategories()
-    {
-        return $this->belongsToMany(JobCategories::class);
-    }
+//    public function jobcategories()
+//    {
+//        return $this->belongsToMany(JobCategories::class);
+//    }
     public function jobs()
     {
         return $this->belongsToMany(Jobs::class);

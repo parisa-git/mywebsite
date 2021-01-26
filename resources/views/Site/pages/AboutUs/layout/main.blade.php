@@ -12,46 +12,13 @@
             <div class="col-lg-6">
                 <article class="box-info">
                     <h3>{{$item->about_title}}</h3>
-                    <p>{{$item->about_desc}}</p>
+                    <p>{!! $item->about_desc !!}</p>
 
                 </article>
             </div>
         </div>
     </div>
-        <div class="row row-50 justify-content-center direction text-right">
-            <div class="col-sm-6 col-md-4">
-                <!-- Box Line-->
-                <article class="box-line">
-                    <div class="box-line-icon icon mercury-icon-target"></div>
-                    <div class="box-line-divider"></div>
-                    <h5 class="box-line-title">
-                        آدرس ما :
-                        {{$item->about_address}}
-                    </h5>
-                </article>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <!-- Box Line-->
-                <article class="box-line">
-                    <div class="box-line-icon icon mercury-icon-group"></div>
-                    <div class="box-line-divider"></div>
-                    <h5 class="box-line-title">
-                        دفتر:
-                        {{$item->about_office}}
-                    </h5>
-                </article>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <!-- Box Line-->
-                <article class="box-line">
-                    <div class="box-line-icon icon mercury-icon-partners"></div>
-                    <div class="box-line-divider"></div>
-                    <h5 class="box-line-title">
-                        شماره تماس:
-                        {{$item->about_phone}}</h5>
-                </article>
-            </div>
-        </div>
+
     @endforeach
 </section>
 

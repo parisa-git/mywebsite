@@ -13,9 +13,12 @@
             <div class="col-12 direction">
                 <div class="table-job-offers-outer">
                     <table class="table-job-offers table-responsive">
-                        @foreach($jobs as $item)
+
+                            @foreach($latest as $item)
                         <tr>
-                            <td class="table-job-offers-date"><span>{{Hekmatinasser\Verta\Verta::instance($item->created_at)->formatDifference()}}</span></td>
+                            <td class="table-job-offers-date">
+                                <span>{{Hekmatinasser\Verta\Verta::instance($item->created_at)->formatDifference()}}</span>
+                            </td>
                             <td class="table-job-offers-main">
                                 <!-- Company Light-->
                                 <article class="company-light">
@@ -42,6 +45,7 @@
                             <td class="table-job-offers-badge"><span class="badge">{{$item->job_time}}</span></td>
                         </tr>
                         @endforeach
+
                     </table>
                 </div>
             </div>

@@ -85,7 +85,7 @@
                                     <td>{{$items->story_jobTitle}}</td>
                                     <td>{!!  Illuminate\Support\Str::limit( $items->story_text, 10)!!}</td>
                                     <td>
-                                        <a class="btn btn-outline-primary m-1 ajax  " href="{{route('admin.stories.edit', $items->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
+                                        <a class="btn btn-outline-success m-1 ajax  " href="{{route('admin.stories.edit', $items->id)}}" data-toggle="tooltip" title="" data-original-title="ویرایش">
                                             <i class="m-1 fa fa-edit"></i>
                                         </a>
                                         <a class="btn btn-outline-danger m-1 ajax  "  href="{{route('admin.stories.destroy', $items->id)}}" data-toggle="tooltip" title="" data-original-title="حذف">

@@ -28,15 +28,15 @@ class Jobs extends Model
 //    public function Job_Category(){
 //        return $this->belongsTo(JobCategories::class,'categories_id','id');
 //    }
-    public function JobCategories()
+    public function JobCategory()
     {
-        return $this->belongsTo(JobCategories::class);
+        return $this->belongsTo(JobCategory::class);
     }
 
 
-    public function states()
+    public function state()
     {
-        return $this->belongsTo(States::class);
+        return $this->belongsTo(State::class);
     }
 
 
